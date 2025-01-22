@@ -12,17 +12,17 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: UI
+  companyName: Paulo Trucking Corp.
+  productName: Paulol
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.05660379, g: 0.05660379, b: 0.05660379, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
-  m_SplashScreenOverlayOpacity: 1
+  m_SplashScreenOverlayOpacity: 0.515
   m_SplashScreenAnimation: 1
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 0
+  m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 1
@@ -39,8 +39,34 @@ PlayerSettings:
     y: 0
     width: 1
     height: 1
-  m_SplashScreenLogos: []
-  m_VirtualRealitySplashScreen: {fileID: 0}
+  m_SplashScreenLogos:
+  - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
+    duration: 2
+  - logo: {fileID: -1876625625, guid: 5330bf03c01a0524d8a26fd1e93b068b, type: 3}
+    duration: 2
+  - logo: {fileID: 1032476414, guid: e8337792f0b17f9489b6c56f9548f947, type: 3}
+    duration: 2
+  - logo: {fileID: -48947060, guid: 1312d138d03f7074fb852b39e4745843, type: 3}
+    duration: 2
+  - logo: {fileID: 1732075351, guid: 52c081dab86eb6c46905d2b363362a4b, type: 3}
+    duration: 2
+  - logo: {fileID: 1604586316, guid: 96201fc2264be194db9b8e005cb63fec, type: 3}
+    duration: 2
+  - logo: {fileID: 1201116501, guid: b48d2504c0a99794f80fa4877ba0116f, type: 3}
+    duration: 2
+  - logo: {fileID: 910022664, guid: 335f471b27fa2584786e63746a6e8a0f, type: 3}
+    duration: 2
+  - logo: {fileID: -232369336, guid: c4dab13967215ef469212cfb58a57e03, type: 3}
+    duration: 2
+  - logo: {fileID: 1008829274, guid: 630831e8a9b28fb4da89f49baaf90507, type: 3}
+    duration: 2
+  - logo: {fileID: 1028239264, guid: 44f0a2d3c72deeb4fb62a8957bb3260a, type: 3}
+    duration: 2
+  - logo: {fileID: -970501440, guid: 92809de7e0f2b3e47aa4a37918ce66f8, type: 3}
+    duration: 2
+  - logo: {fileID: -1276516330, guid: d782431c0f5c2dd4cb46abd7012b9df8, type: 3}
+    duration: 2
+  m_VirtualRealitySplashScreen: {fileID: 2800000, guid: 335f471b27fa2584786e63746a6e8a0f, type: 3}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -105,7 +131,7 @@ PlayerSettings:
   xboxEnableKinectAutoTracking: 0
   xboxEnableFitness: 0
   visibleInBackground: 1
-  allowFullscreenSwitch: 1
+  allowFullscreenSwitch: 0
   fullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
@@ -288,7 +314,14 @@ PlayerSettings:
   AndroidAppBundleSizeToValidate: 150
   AndroidReportGooglePlayAppDependencies: 1
   androidSymbolsSizeThreshold: 800
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 335f471b27fa2584786e63746a6e8a0f, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: iPhone
     m_Icons:
@@ -786,7 +819,7 @@ PlayerSettings:
   monoEnv: 
   splashScreenBackgroundSourceLandscape: {fileID: 0}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
-  blurSplashScreenBackground: 1
+  blurSplashScreenBackground: 0
   spritePackerPolicy: 
   webGLMemorySize: 32
   webGLExceptionSupport: 1
@@ -852,8 +885,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: UI
-  metroPackageVersion: 
+  metroPackageName: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -861,7 +894,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: UI
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: UI
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
