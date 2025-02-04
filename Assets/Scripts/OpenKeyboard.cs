@@ -1,38 +1,63 @@
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using UnityEngine.EventSystems;
 
 public class OpenKeyboard : MonoBehaviour
 {
-   private InputField inputField;
-    private Process keyboardProcess;
+    public TMP_InputField inputField;  // Reference to the TMP Input Field
+    public Button sendButton;          // Reference to the Send Button
 
-    [DllImport("user32.dll")]
-    private static extern void SetForegroundWindow(System.IntPtr hWnd);
-
-    void Start()
+    private void OnEnable()
     {
-        inputField = GetComponent<InputField>();
-
-        // Listen for the InputField's end edit event to close the keyboard
-        inputField.onEndEdit.AddListener(OnDeselect);
-    }
-
-    // Open keyboard when Input Field is selected (clicked on)
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        keyboardProcess = Process.Start("C:\\Program Files\\Common Files\\Microsoft Shared\\ink\\TabTip.exe");
-    }
-
-    // Close keyboard when Input Field loses focus (deselected)
-    void OnDeselect(string text)
-    {
-        // Kill the keyboard process (close it)
-        if (keyboardProcess != null && !keyboardProcess.HasExited)
+        // Add listener to the TMP_InputField for when it is selected
+        if (inputField != null)
         {
-            keyboardProcess.Kill();
+            inputField.onSelect.AddListener(OnInputFieldSelected);
+        }
+    }
+
+    private void OnDisable()
+    {
+        // Remove listener when the script is disabled
+        if (inputField != null)
+        {
+            inputField.onSelect.RemoveListener(OnInputFieldSelected);
+        }
+    }
+
+    private void OnInputFieldSelected(string text)
+    {
+        // Open the on-screen keyboard when the input field is selected
+        ShowOnScreenKeyboard();
+    }
+
+    private void ShowOnScreenKeyboard()
+    {
+        // Open the on-screen keyboard using System.Diagnostics (osk.exe)
+        System.Diagnostics.Process.Start("osk.exe");
+    }
+
+    // This method is called when the Send button is clicked
+    public void onSend() 
+    {
+        if (inputField != null)
+        {
+            // Get the text from the input field (use inputField.text)
+            string inputText = inputField.text;
+
+            // Check if there is input and log the text, else log "NO TEXT"
+            if (!string.IsNullOrEmpty(inputText)) // Checks for both null and empty string
+            {
+                Debug.Log("Input text: " + inputText);
+            }
+            else
+            {
+                Debug.Log("NO TEXT");
+            }
+        }
+        else
+        {
+            Debug.LogError("Input Field is not assigned in the Inspector.");
         }
     }
 }
