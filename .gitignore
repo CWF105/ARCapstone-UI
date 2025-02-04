@@ -1,0 +1,19 @@
+Unity generated files
+/Library/
+/Temp/
+/Obj/
+# /Build/
+# /Builds/
+/Packages/
+/Logs/
+User-specific files
+*.user
+*.userprefs
+*.pidb
+*.suo
+*.sln
+*.svd
+.vs/
+.vscode/
+Windows image file thumbs.db
+Thumbs.db
